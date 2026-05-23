@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -42,6 +43,18 @@ namespace CashierApplication
             item.setPayment(payment);
 
             lblChange.Text = item.getChange().ToString("F2") + "  Php";
+        }
+
+        private void logoutToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            frmLoginAccount frmLogin = new frmLoginAccount();
+            frmLogin.Show();
+            this.Close();
+        }
+
+        private void exitApplicationToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

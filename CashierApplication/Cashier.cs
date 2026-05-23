@@ -8,17 +8,17 @@ namespace CashierApplication
 {
     public class Cashier : UserAccount
     {
-        private string departmet;
+        private string department;
 
         public Cashier(string name, string department, string userName, string password) 
             : base(name, userName, password)
         { 
-            this.departmet = department;
+            this.department = department;
         }
         public override bool validateLogin(string userName, string password)
         {
             return (user_name == userName && user_password  == password);
         }
-
+        public string getDepartmet() { return department; }
     }
 }
